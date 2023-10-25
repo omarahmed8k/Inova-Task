@@ -8,8 +8,8 @@ export default function EbookDetails() {
     const { ebookId } = useParams()
     const [loading, setLoading] = useState(true)
     const [ebookDetails, setEbookDetails] = useState({})
-    const [course, setCourse] = useState({})
-    const [book, setBook] = useState({})
+    const [course, setCourse] = useState(null)
+    const [book, setBook] = useState(null)
 
     async function getEbookDetails() {
         setLoading(true)
@@ -27,6 +27,8 @@ export default function EbookDetails() {
         setLoading(false)
     }
 
+    console.log(book, course)
+
     useEffect(() => {
         getEbookDetails()
     }, [ebookId])
@@ -43,31 +45,33 @@ export default function EbookDetails() {
                     {ebookDetails?.attributes?.name}
                 </p>
 
-                {course && (
-                    <div className="ebook-details">
-                        <div className="ebook-image">
-                            {ebookDetails?.attributes?.course?.image_url ?
-                                <img src={ebookDetails?.attributes?.course?.image_url} alt={ebookDetails?.attributes?.name} /> : <p>No image</p>
-                            }
+                <div className="ebook-info">
+                    {course && (
+                        <div className="course-details">
+                            <div className="course-image">
+                                {course?.image_url ?
+                                    <img src={course?.image_url} alt={course?.name} /> : <p>No image</p>
+                                }
+                            </div>
+                            <div className="course-description">
+                                <p>{course?.description || 'No description'}</p>
+                            </div>
                         </div>
-                        <div className="ebook-description">
-                            <p>{ebookDetails?.attributes?.description || 'No description'}</p>
-                        </div>
-                    </div>
-                )}
+                    )}
 
-                {book && (
-                    <div className="ebook-details">
-                        <div className="ebook-image">
-                            {ebookDetails?.attributes?.book?.image_url ?
-                                <img src={ebookDetails?.attributes?.book?.image_url} alt={ebookDetails?.attributes?.name} /> : <p>No image</p>
-                            }
+                    {book && (
+                        <div className="book-details">
+                            <div className="book-image">
+                                {book?.image_url ?
+                                    <img src={book?.image_url} alt={book?.title} /> : <p>No image</p>
+                                }
+                            </div>
+                            <div className="book-description">
+                                <p>{book?.description || 'No description'}</p>
+                            </div>
                         </div>
-                        <div className="ebook-description">
-                            <p>{ebookDetails?.attributes?.description || 'No description'}</p>
-                        </div>
-                    </div>
-                )}
+                    )}
+                </div >
             </div >
         </>
     )
