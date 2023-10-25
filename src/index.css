@@ -1,10 +1,38 @@
+@font-face {
+  font-family: "Barlow-Bold";
+  src: local("Barlow-Bold"),
+    url(../src/assets/fonts/Barlow-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Medium";
+  src: local("Barlow-Medium"),
+    url(../src/assets/fonts/Barlow-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Regular";
+  src: local("Barlow-Regular"),
+    url(../src/assets/fonts/Barlow-Regular.ttf) format("truetype");
+}
+
+:root {
+  --font-regular: "Barlow-Regular", sans-serif;
+  --font-medium: "Barlow-Medium", sans-serif;
+  --font-bold: "Barlow-Bold", sans-serif;
+  --main-color: #0a0a0a;
+  --second-color: #ffffff;
+  --main-text-color: #ffffff;
+  --second-text-color: #0a0a0a;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background-color: #fff;
+  font-family: var(--font-regular);
+  background-color: var(--main-color);
 }
