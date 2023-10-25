@@ -20,6 +20,7 @@
 
 .header-nav {
     background: var(--second-color);
+    margin-bottom: 50px;
 
     .container {
         display: flex;
@@ -49,6 +50,16 @@
 
             i {
                 color: #fff;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .header-nav {
+        .container {
+            .nav-link {
+                display: none;
             }
         }
     }

@@ -14,8 +14,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ebook" element={<Ebook />} />
-        <Route path="/ebook/:ebookId" element={<EbookDetails />} />
+        <Route path="/ebooks" element={<Ebook />} />
+        <Route path="/ebooks/:ebookId" element={<EbookDetails />} />
       </Routes>
       <Footer />
     </div>

@@ -7,7 +7,7 @@ export default function Header() {
         { path: '/', name: 'Home' },
         { path: '/news', name: 'News' },
         { path: '/courses', name: 'Courses' },
-        { path: '/ebook', name: 'E-books' },
+        { path: '/ebooks', name: 'E-books' },
         { path: '/contact', name: 'Contact Us' },
     ]
     return (
