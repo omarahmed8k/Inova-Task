@@ -13,7 +13,9 @@ function Language() {
 
   return (
     <button className="language-button" onClick={() => { switchLang(lang === "en" ? "ar" : "en"); }}>
-      <p className="language-text">{t("language")}</p>
+      <div className="container">
+        <p className="language-text">{t("language")}</p>
+      </div>
     </button>
   );
 }

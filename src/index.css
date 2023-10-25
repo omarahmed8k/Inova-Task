@@ -20,10 +20,11 @@
   --font-regular: "Barlow-Regular", sans-serif;
   --font-medium: "Barlow-Medium", sans-serif;
   --font-bold: "Barlow-Bold", sans-serif;
-  --main-color: #0a0a0a;
-  --second-color: #ffffff;
-  --main-text-color: #ffffff;
-  --second-text-color: #0a0a0a;
+  --bg-color: #0a0a0a;
+  --main-color: #55e748;
+  --second-color: #1e1e1e;
+  --main-text: #ffffff;
+  --second-text: #dddddd;
 }
 
 * {
@@ -34,5 +35,35 @@
 
 body {
   font-family: var(--font-regular);
-  background-color: var(--main-color);
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 100px;
+  }
 }
