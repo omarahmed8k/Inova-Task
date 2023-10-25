@@ -1,0 +1,50 @@
+.ebook-page {
+    ul {
+        display: flex;
+        gap: 50px;
+        margin-bottom: 50px;
+
+        li {
+            button {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .ebook-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        margin-bottom: 50px;
+
+        a {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .ebook-page {
+        ul {
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            li {
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .ebook-card {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

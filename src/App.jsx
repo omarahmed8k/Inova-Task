@@ -12,11 +12,13 @@ function App() {
     <div>
       <Language />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ebooks" element={<Ebook />} />
-        <Route path="/ebooks/:ebookId" element={<EbookDetails />} />
-      </Routes>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ebooks" element={<Ebook />} />
+          <Route path="/ebooks/:ebookId" element={<EbookDetails />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   )
